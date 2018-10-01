@@ -1,7 +1,5 @@
 package com.autentia.tutoriales.bddspringboot.modelo;
 
-import com.autentia.tutoriales.bddspringboot.vo.RespuestaPerfilCliente;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -36,7 +34,7 @@ public class PerfilCliente {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof RespuestaPerfilCliente)) return false;
+        if (!(o instanceof PerfilCliente)) return false;
         PerfilCliente that = (PerfilCliente) o;
         return new org.apache.commons.lang3.builder.EqualsBuilder()
                 .append(id, that.id)
