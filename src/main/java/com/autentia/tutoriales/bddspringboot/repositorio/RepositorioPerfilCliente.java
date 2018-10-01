@@ -7,4 +7,5 @@ import java.util.UUID;
 public interface RepositorioPerfilCliente {
 
     PerfilCliente findById(UUID id);
+    void save(PerfilCliente perfil);
 }
