@@ -1,14 +1,30 @@
 package com.autentia.tutoriales.bddspringboot.modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Entity
+@Table(schema = "perfil", name = "perfil_cliente")
 public class PerfilCliente {
 
+    @Id
+    @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
+
+    @Column(name = "nombre", nullable = false)
     private String nombre;
+
+    @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "telefono")
     private String telefono;
 
     public UUID getId() {

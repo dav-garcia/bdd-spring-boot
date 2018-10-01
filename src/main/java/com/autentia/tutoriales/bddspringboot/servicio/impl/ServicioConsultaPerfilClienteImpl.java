@@ -8,6 +8,7 @@ import com.autentia.tutoriales.bddspringboot.vo.RespuestaPerfilCliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -24,7 +25,7 @@ public class ServicioConsultaPerfilClienteImpl implements ServicioConsultaPerfil
 
     @Override
     public RespuestaPerfilCliente consultar(UUID idCliente) {
-        PerfilCliente perfil = repositorio.findById(idCliente);
-        return conversor.convert(perfil);
+        Optional<PerfilCliente> perfilOpcional = repositorio.findById(idCliente);
+        return conversor.convert(perfilOpcional.orElse(null));
     }
 }

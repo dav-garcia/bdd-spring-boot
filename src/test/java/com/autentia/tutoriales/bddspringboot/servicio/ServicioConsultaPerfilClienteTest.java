@@ -13,6 +13,7 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.hamcrest.Matchers.*;
@@ -35,14 +36,14 @@ public class ServicioConsultaPerfilClienteTest {
     public void dadoIdClienteExistenteEntoncesDevuelvePerfilCliente() {
         // Given
         UUID id = UUID.randomUUID();
-        PerfilCliente perfil = new PerfilCliente.Builder()
+        Optional<PerfilCliente> perfilOpcional = Optional.of(new PerfilCliente.Builder()
                 .withId(id)
                 .withNombre("David")
                 .withFechaNacimiento(LocalDate.of(1976, 2, 28))
                 .withEmail("dgarciagil@autentia.com")
                 .withTelefono("+34 123456789")
-                .build();
-        doReturn(perfil).when(repositorio).findById(id);
+                .build());
+        doReturn(perfilOpcional).when(repositorio).findById(id);
 
         // When
         RespuestaPerfilCliente result = sut.consultar(id);
