@@ -1,0 +1,35 @@
+databaseChangeLog:
+- changeSet:
+    id: perfil_create_schema
+    author: Autentia
+    changes:
+    - sql:
+        sql: CREATE SCHEMA IF NOT EXISTS perfil
+- changeSet:
+    id: perfil_create_table_perfil_cliente
+    author: Autentia
+    changes:
+    - createTable:
+        schemaName: perfil
+        tableName: perfil_cliente
+        columns:
+        - column:
+            name: id
+            type: uuid
+            constraints:
+              primaryKey: true
+              nullable: false
+        - column:
+            name: nombre
+            type: VARCHAR(200)
+            constraints:
+              nullable: false
+        - column:
+            name: fecha_nacimiento
+            type: DATE
+        - column:
+            name: email
+            type: VARCHAR(200)
+        - column:
+            name: telefono
+            type: VARCHAR(20)
