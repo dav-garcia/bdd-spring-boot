@@ -44,8 +44,8 @@ public class RepositorioPerfilClienteTest {
         Optional<PerfilCliente> resultOpcional = transactionTemplate.execute(s -> sut.findById(id));
 
         // Then
-        assertThat(resultOpcional, is(not(nullValue())));
-        PerfilCliente result = resultOpcional.get();
+        PerfilCliente result = resultOpcional.orElse(null);
+        assertThat(result, is(not(nullValue())));
         assertThat(result.getId(), is(id));
         assertThat(result.getNombre(), is("David"));
         assertThat(result.getFechaNacimiento(), is(LocalDate.of(1976, 2, 28)));
