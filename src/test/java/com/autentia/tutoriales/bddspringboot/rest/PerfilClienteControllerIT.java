@@ -21,7 +21,7 @@ import static org.mockito.Mockito.doReturn;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class PerfilClienteControllerTest {
+public class PerfilClienteControllerIT {
 
     @MockBean
     private ServicioConsultaPerfilCliente servicio;
