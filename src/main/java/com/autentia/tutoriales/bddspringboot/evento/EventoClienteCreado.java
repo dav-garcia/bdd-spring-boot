@@ -5,6 +5,8 @@ import java.util.UUID;
 
 public class EventoClienteCreado {
 
+    public static final String TOPIC = "cliente.creado";
+
     private UUID id;
     private String nombre;
     private LocalDate fechaNacimiento;
