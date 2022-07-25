@@ -1,9 +1,6 @@
 package com.autentia.tutoriales.bddspringboot;
 
-import com.autentia.tutoriales.bddspringboot.PerfilCliente;
-import com.autentia.tutoriales.bddspringboot.RepositorioPerfilCliente;
-import com.autentia.tutoriales.bddspringboot.ServicioConsultaPerfilCliente;
-import com.autentia.tutoriales.bddspringboot.adaptador.rest.ConversorRespuestaPerfilCliente;
+import com.autentia.tutoriales.bddspringboot.conversor.ConversorRespuestaPerfilCliente;
 import com.autentia.tutoriales.bddspringboot.adaptador.rest.dto.RespuestaPerfilCliente;
 import com.autentia.tutoriales.bddspringboot.impl.ServicioConsultaPerfilClienteImpl;
 import org.junit.jupiter.api.Test;

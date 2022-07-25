@@ -3,7 +3,7 @@ package com.autentia.tutoriales.bddspringboot.impl;
 import com.autentia.tutoriales.bddspringboot.PerfilCliente;
 import com.autentia.tutoriales.bddspringboot.RepositorioPerfilCliente;
 import com.autentia.tutoriales.bddspringboot.ServicioConsultaPerfilCliente;
-import com.autentia.tutoriales.bddspringboot.adaptador.rest.ConversorRespuestaPerfilCliente;
+import com.autentia.tutoriales.bddspringboot.conversor.ConversorRespuestaPerfilCliente;
 import com.autentia.tutoriales.bddspringboot.adaptador.rest.dto.RespuestaPerfilCliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

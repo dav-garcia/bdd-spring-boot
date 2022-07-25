@@ -1,9 +1,6 @@
 package com.autentia.tutoriales.bddspringboot;
 
-import com.autentia.tutoriales.bddspringboot.PerfilCliente;
-import com.autentia.tutoriales.bddspringboot.RepositorioPerfilCliente;
-import com.autentia.tutoriales.bddspringboot.ServicioEventoClienteCreado;
-import com.autentia.tutoriales.bddspringboot.adaptador.bus.ConversorEventoClienteCreado;
+import com.autentia.tutoriales.bddspringboot.conversor.ConversorEventoClienteCreado;
 import com.autentia.tutoriales.bddspringboot.adaptador.bus.dto.EventoClienteCreado;
 import com.autentia.tutoriales.bddspringboot.impl.ServicioEventoClienteCreadoImpl;
 import org.junit.jupiter.api.Test;

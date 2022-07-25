@@ -1,16 +1,15 @@
-package com.autentia.tutoriales.bddspringboot.adaptador.bus;
+package com.autentia.tutoriales.bddspringboot.conversor;
 
-import com.autentia.tutoriales.bddspringboot.adaptador.bus.dto.EventoClienteCreado;
 import com.autentia.tutoriales.bddspringboot.PerfilCliente;
+import com.autentia.tutoriales.bddspringboot.adaptador.rest.dto.RespuestaPerfilCliente;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ConversorEventoClienteCreado implements Converter<EventoClienteCreado, PerfilCliente> {
-
+public class ConversorRespuestaPerfilCliente implements Converter<PerfilCliente, RespuestaPerfilCliente> {
     @Override
-    public PerfilCliente convert(EventoClienteCreado source) {
-        return new PerfilCliente.Builder()
+    public RespuestaPerfilCliente convert(PerfilCliente source) {
+        return source == null ? null : new RespuestaPerfilCliente.Builder()
                 .withId(source.getId())
                 .withNombre(source.getNombre())
                 .withFechaNacimiento(source.getFechaNacimiento())

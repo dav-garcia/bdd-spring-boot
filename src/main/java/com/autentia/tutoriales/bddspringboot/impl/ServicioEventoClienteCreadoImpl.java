@@ -3,7 +3,7 @@ package com.autentia.tutoriales.bddspringboot.impl;
 import com.autentia.tutoriales.bddspringboot.PerfilCliente;
 import com.autentia.tutoriales.bddspringboot.RepositorioPerfilCliente;
 import com.autentia.tutoriales.bddspringboot.ServicioEventoClienteCreado;
-import com.autentia.tutoriales.bddspringboot.adaptador.bus.ConversorEventoClienteCreado;
+import com.autentia.tutoriales.bddspringboot.conversor.ConversorEventoClienteCreado;
 import com.autentia.tutoriales.bddspringboot.adaptador.bus.dto.EventoClienteCreado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
